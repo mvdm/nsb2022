@@ -1,4 +1,4 @@
-nsb2021
+nsb2022
 =============
 
 MATLAB code for the analysis of neural data, used in the mouse
