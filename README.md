@@ -10,3 +10,5 @@ Contributors:
 
   * Matt van der Meer
   * Jeff Stott
+  * Sol Ramos
+  * Minel Arinel
