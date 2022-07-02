@@ -44,7 +44,7 @@ cfg_def.min_cluster_quality = 5;
 cfg_def.getRatings = 0;
 cfg_def.getTTnumbers = 0;
 cfg_def.verbose = 1;
-cfg_def.uint = '32';
+cfg_def.uint = '64';
 
 mfun = mfilename;
 cfg = ProcessConfig(cfg_def,cfg_in,mfun); % this takes fields from cfg_in and puts them into cfg

@@ -11,3 +11,8 @@ Contributors:
   * Matt van der Meer
   * Jeff Stott
   * Matias Mugnaini
+  * Sol Ramos
+  * Minel Arinel 
+  * Aditya Krishna
+  * Dhruv Mehrotra
+
