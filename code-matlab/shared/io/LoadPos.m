@@ -9,6 +9,7 @@ function pos_tsd = LoadPos(cfg_in)
 %   if no filename is specified, loads *.nvt file in current dir
 % cfg.tsflag = 'sec';
 % cfg.removeZeros = 1;
+% cfg.getAngles = 0;
 % cfg.convFact = [xConvFact yConvFact]; % output from PosCon() function,
 %                converts position data units from pixels to centimeters
 % cfg.verbose = 1; 1 display command window text, 0 don't
@@ -25,6 +26,7 @@ cfg_def.fn = {};
 cfg_def.removeZeros = 1;
 cfg_def.tsflag = 'sec';
 cfg_def.convFact = [];
+cfg_def.getAngles = 0;
 cfg_def.verbose = 1;
 
 mfun = mfilename;
@@ -51,6 +53,7 @@ if cfg.removeZeros
 
     X = X(keep_idx);
     Y = Y(keep_idx);
+    Angles = Angles(keep_idx);
     Timestamps = Timestamps(keep_idx);
     
 end
@@ -67,6 +70,11 @@ pos_tsd.label{1} = 'x';
 
 pos_tsd.data(2,:) = Y;
 pos_tsd.label{2} = 'y';
+
+if cfg.getAngles
+    pos_tsd.data(3,:) = Angles;
+    pos_tsd.label{3} = 'hd';
+end
 
 % Convert data from pixels to cm
 if ~isempty(cfg.convFact) 
